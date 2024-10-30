@@ -9,7 +9,7 @@ local default_config = {
   signs = {
     mark = { icon = "", color = "red", line_bg = "NONE" },
     desc_format = function(desc)
-      return desc
+      return "←🧚 " + desc
     end,
   },
   picker = {
