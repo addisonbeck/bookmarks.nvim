@@ -7,7 +7,7 @@ local default_config = {
   json_db_path = vim.fs.normalize(vim.fn.stdpath("config") .. "/bookmarks.db.json"),
   -- This is how the sign looks.
   signs = {
-    mark = { icon = "󰃁", color = "red", line_bg = "#572626" },
+    mark = { icon = "", color = "red", line_bg = "NONE" },
     desc_format = function(desc)
       return desc
     end,
