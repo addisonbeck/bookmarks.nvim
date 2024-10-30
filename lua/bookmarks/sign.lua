@@ -14,13 +14,16 @@ local ns = vim.api.nvim_create_namespace(ns_name)
 ---@field icon string
 ---@field color? string
 ---@field line_bg? string
+---@field virtual_text_prefix? string
+---@field highlight_group? string
 
 ---@param signs Signs
 local function setup(signs)
   local mark = signs.mark
   vim.fn.sign_define(hl_name, { text = mark.icon, texthl = hl_name })
   if mark.color then
-    vim.api.nvim_set_hl(0, hl_name, { foreground = mark.color })
+    ---vim.api.nvim_set_hl(0, hl_name, { foreground = mark.color })
+    vim.api.nvim_set_hl(0, hl_name, { link = mark.highlight_group })
   end
   if mark.line_bg then
     vim.api.nvim_set_hl(0, hl_name_line, { bg = mark.line_bg })
