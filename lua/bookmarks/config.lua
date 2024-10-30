@@ -9,11 +9,12 @@ local default_config = {
   signs = {
     mark = { 
       icon = "",
-      line_bg = "NONE",
-      highlight_group = "Comment",
+      virtual_text_prefix = "←🧚",
+      line_bg = "NONE" 
+      color = "Comment"
     },
     desc_format = function(desc)
-      return "←🧚" .. desc
+      return desc
     end,
   },
   picker = {
