@@ -9,8 +9,8 @@ local default_config = {
   signs = {
     mark = { 
       icon = "",
-      line_bg = "NONE" 
-      highlight_group = "Comment"
+      line_bg = "NONE",
+      highlight_group = "Comment",
     },
     desc_format = function(desc)
       return "←🧚" .. desc
