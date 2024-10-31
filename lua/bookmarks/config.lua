@@ -13,7 +13,7 @@ local default_config = {
       color = "Comment",
     },
     desc_format = function(desc)
-      return "←🧚 desc"
+      return "←🧚 " .. desc
     end,
   },
   picker = {
